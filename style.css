@@ -1,0 +1,13 @@
+body {
+    background-color: rgb(233, 167, 224);
+}
+.container {
+    background-color: lightgray;
+    border-radius: 10px;
+    width: 350px;
+    justify-self: left;
+    input[type="sumbit"]:hover {
+        background-color: bisque;
+        border-radius: 5px;
+    }
+}
