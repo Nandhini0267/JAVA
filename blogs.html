@@ -5,6 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog Website</title>
     <link rel="stylesheet" href="styles1.css">
+    <style>
+        .container {
+            display: flex;
+        }
+        .left-side, .right-side {
+            flex: 1;
+        }
+        .Details {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+        .Detail-card {
+            flex: 1;
+            text-align: center;
+            margin: 10px;
+        }
+        .query-form {
+            margin-top: 20px;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
@@ -14,10 +36,10 @@
         <div class="right-side">
             <h1>Infosys</h1>
             <p>
-                Infosys was founded with US\$250 by seven engineers in 1981.
-                 It was the first IT company from India to be listed on NASDAQ.
-                 Infosys has helped India become a global destination for software services talent.
-  <br><br>
+                Infosys was founded with US$250 by seven engineers in 1981.
+                It was the first IT company from India to be listed on NASDAQ.
+                Infosys has helped India become a global destination for software services talent.
+                <br><br>
                 Hiring process:
             </p>
             <ol>
@@ -26,12 +48,81 @@
                 <li>Technical Round: Interview to evaluate technical skills.</li>
                 <li>HR Round: Interview to assess cultural fit.</li>
                 <li>Final Decision: The company makes a hiring decision</li>
-                
             </ol>
             <p>
                 Infosys they are providing a lot of job opportunities and training.
+                Infosys is an Indian multinational IT services and consulting company
+                that provides business solutions to clients in many countries. 
             </p>
         </div>
     </div>
+    <section id="Details-container" class="Details">
+        <div class="Detail-card">
+            <img src="C:\Users\2nare\Downloads\infosys ceo.jpg" alt="image">
+            <h3>Infosys CEO</h3>
+            <p>Salil Parekh, as Chief Executive Officer and Managing Director,
+               sets and evolves the strategic direction for the company and 
+               its portfolio of offerings, while nurturing a strong leadership team 
+               to drive its execution.</p>
+            <button class="view-btn" data-card-id="ceo-more-info">View More</button>
+            <div id="ceo-more-info" style="display: none;">
+                <p>Salil joined Infosys in 2018 and has been instrumental 
+                   in driving digital transformation and growth. Under his
+                   leadership, Infosys has expanded its services and strengthened
+                   its position as a global leader in consulting and IT services.</p>
+            </div>
+        </div>
+        <div class="Detail-card">
+            <img src="C:\Users\2nare\Downloads\infosys.manager.jpg" alt="image">
+            <h3>Infosys Manager</h3>
+            <p>An Infosys manager is a leadership role within the IT services company Infosys, 
+               responsible for overseeing a team of employees on projects, ensuring delivery
+               of client requirements, managing project timelines and budgets, while also 
+               fostering team development and providing guidance to their team members</p>
+            <button class="view-btn" data-card-id="manager-more-info">View More</button>
+            <div id="manager-more-info" style="display: none;">
+                <p>The Infosys manager also plays a key role in identifying and addressing
+                    any issues that may arise, ensuring that the team remains productive and motivated. 
+                    They collaborate with clients to understand their needs and expectations,
+                    and work to deliver high-quality solutions that meet or exceed those expectations.</p>
+            </div>
+        </div>
+        <div class="Detail-card">
+            <img src="C:\Users\2nare\Downloads\infosys.offcampus.jpg" alt="image">
+            <h3>Infosys off campus</h3>
+            <p>An "Infosys off-campus" recruitment drive refers to when Infosys,
+                   a global IT services company, hires fresh graduates directly
+                   through their online platform, without going through a specific college 
+                   placement process;</p>
+            <button class="view-btn" data-card-id="offcampus-more-info">View More</button>
+            <div id="offcampus-more-info" style="display: none;">
+                <p>The off-campus recruitment drive is an opportunity for graduates 
+                    to apply for various positions at Infosys, participate in the selection process, 
+                    and potentially secure a job offer. These drives are typically open to graduates 
+                    from multiple disciplines and offer a chance to join Infosys' workforce and 
+                    contribute to its diverse projects and initiatives.</p>
+            </div>
+        </div>
+    </section>
+    <section class="Details">
+        <p>Infosys continues to lead by example in providing quality education and employment opportunities,
+             making a significant impact in the IT industry.</p>
+    </section>
+    <section class="query-form">
+        <h2>Contact Us</h2>
+        <form action="/submit_query" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <br><br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <br><br>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+            <br><br>
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+    <script src="scripts2.js"></script>
 </body>
 </html>
