@@ -1,0 +1,38 @@
+const express = require('express');
+const mongoose = require('mongoose');
+const bodyParser = require('body-parser');
+const cors = require('cors');
+
+const app = express();
+app.use(cors());
+app.use(bodyParser.json());
+
+mongoose.connect('mongodb://localhost:27017/quizapp', {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+}).then(() => {
+    console.log('Connected to MongoDB');
+}).catch((err) => console.log(err));
+
+const questionSchema = new mongoose.Schema({
+    question: String,
+    options: [String],
+    correctAnswer: Number
+});
+
+const Question = mongoose.model('Question', questionSchema);
+
+app.get('/questions', async (req, res) => {
+    const questions = await Question.find();
+    res.json(questions);
+});
+
+app.post('/questions', async (req, res) => {
+    const question = new Question(req.body);
+    await question.save();
+    res.json({ message: 'Question added!' });
+});
+
+app.listen(5000, () => {
+    console.log('Server is running on port 5000');
+});
